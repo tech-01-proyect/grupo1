@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Mi Página Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            min-height: 100vh;
+            color: black;
+        }
+        header {
+            background-color: #336790;
+            color: white;
+            padding: 45px;
+            text-align: center;
+        }
+        nav {
+            background-color: #D6C1A6;
+            padding: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .seccion {
+            display: none;
+            padding: 20px;
+        }
+            #inicioContenido {
+            display: block;
+            text-align: center;
+        }
+        .box {
+            background: #666666;
+            color: white;
+            margin: 10px auto;
+            padding: 15px;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            border: 3px solid #D3D3D3;
+        }
+        .btn {
+            background: #999999;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #D6C1A6;
+            color: black;
+            text-align: center;
+            padding: 30px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+       .logo {
+            position: absolute;
+            top: 10px; 
+            right: 50px; /* Espaciado desde la derecha */
+            width: 160px; /* Ajusta el tamaño según necesites */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Proyecto Integrado</h1>
+         <img src="logo.JPG" alt="Logo" class="logo">
+    </header>
+
+    <nav>
+        <a onclick="mostrarSeccion('inicioContenido')">Inicio</a>
+        <a onclick="mostrarSeccion('desarrolladoresContenido')">Desarrolladores</a>
+        <a onclick="mostrarSeccion('cursosContenido')">Cursos</a>
+    </nav>
+
+    <!-- Sección de Inicio -->
+    <div id="inicioContenido" class="seccion">
+        <p><h2>Bienvenido a tu espacio para descubrir y profundizar en una amplia variedad de temas de estudio. 
+<br>
+<br>
+Desde los valores hasta historia, literatura y tecnología, aquí encontrarás recursos organizados para que tu aprendizaje sea claro, dinámico y efectivo.
+<br>
+<br>
+Ya sea que estés reforzando conocimientos, preparándote para un examen o simplemente explorando nuevas áreas del saber, nuestra plataforma te ofrece explicaciones detalladas, ejercicios prácticos y material actualizado.
+<br>
+<br>
+¡Empieza tu viaje de aprendizaje hoy y lleva tu conocimiento al siguiente nivel!</h2></p>
+    </div>
+
+    <!-- Sección de Cursos -->
+    <div id="cursosContenido" class="seccion">
+        <h2>Temario:</h2>
+        <div class="box" onclick="window.location.href='paginas/Literatura prueba.html'">Literatura</div>
+        <div class="box" onclick="window.location.href='paginas/Valores.html'">Valores</div> 
+        <div class="box" onclick="window.location.href='paginas/Expresion.html'">Expresión Artística</div>
+        <div class="box" onclick="window.location.href='paginas/Estadística.html'">Estadística</div>   
+        <div class="box" onclick="window.location.href='paginas/Química.html'">Química y Biología</div>
+        <div class="box" onclick="window.location.href='paginas/artenglish.html'">Inglés</div>    
+        <div class="box" onclick="window.location.href='paginas/Fisica.html'">Física</div>             
+      
+        <button class="btn" onclick="mostrarSeccion('inicioContenido')">Volver</button>
+    </div>
+
+    <!-- Sección de Nosotros -->
+    <div id="desarrolladoresContenido" class="seccion">
+        <h2>Integrantes</h2>
+        <div class="box">Daniel Padilla</div>
+        <div class="box">Jasid Flores</div>
+        <div class="box">Luis Ortiz</div>
+        <div class="box">Génesis Sosof</div>
+        <div class="box">Stephanie Bocanegra</div>
+        <div class="box">Shuandy Castañeda</div>
+
+        <button class="btn" onclick="mostrarSeccion('inicioContenido')">Volver</button>
+    </div>
+
+    <footer></footer>
+
+    <script>
+        function mostrarSeccion(id) {
+            // Oculta todas las secciones
+            document.querySelectorAll('.seccion').forEach(seccion => {
+                seccion.style.display = 'none';
+            });
+
+            // Muestra solo la sección seleccionada
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
